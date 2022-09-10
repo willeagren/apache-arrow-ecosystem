@@ -7,8 +7,10 @@ import pyarrow as pa
 pd_df = pd.DataFrame({"Wilhelm": [98, 12, 12], "Tux": [96, 0, 0]})
 pa_table = pa.Table.from_pandas(pd_df)
 
+print(f'The Arrow table looks like:\n{pa_table}')
+
 # Convert back to pandas DataFrame and infer the used schema.
 pd_df_new = pa_table.to_pandas()
 pa_schema = pa.Schema.from_pandas(pd_df)
 
-print(pa_schema)
+print(f'The provided Pandas schema was:{pa_schema}')
