@@ -1,6 +1,5 @@
 import pandas as pd
 import pyarrow as pa
-import numpy as np
 
 # The most similar structure to a pandas Series is the Arrow Array.
 # It is a vector that contains data of the same type as linear,
